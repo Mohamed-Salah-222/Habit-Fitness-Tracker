@@ -7,10 +7,8 @@ import RegisterPage from "./components/RegisterPage";
 import LoginPage from "./components/LoginPage";
 import VerifyPage from "./components/VerifyPage";
 import ProtectedRoute from "./components/ProtectedRoute";
-
-// Add simple placeholders for pages we will build next
-const DashboardPage = () => <h1 className="text-2xl font-bold">My Habits Dashboard</h1>;
-const AddHabitPage = () => <h1 className="text-2xl font-bold">Add a New Habit</h1>;
+import DashboardPage from "./components/DashboardPage";
+import AddHabitPage from "./components/AddHabitPage";
 
 function App() {
   const { user, logout } = useAuth();
@@ -37,7 +35,7 @@ function App() {
                 // If user IS logged in
                 <>
                   <span className="text-sm text-gray-700 hidden sm:block">
-                    Hello, <span className="font-bold">{user.username}</span>
+                    <span className="font-bold">{user.username}</span>
                   </span>
                   <Link to="/habits/new" className="bg-blue-500 text-white hover:bg-blue-600 px-4 py-2 rounded-md text-sm font-medium transition-colors">
                     New Habit
